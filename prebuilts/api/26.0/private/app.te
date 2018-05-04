@@ -526,4 +526,3 @@ neverallow {
 # Themed resources (i.e. composed icons)
 allow appdomain theme_data_file:dir r_dir_perms;
 allow appdomain theme_data_file:file r_file_perms;
-
