@@ -1263,6 +1263,8 @@
 (roletype object_r diskstats_service_26_0)
 (typeattribute display_service_26_0)
 (roletype object_r display_service_26_0)
+(typeattribute edgegesture_service_26_0)
+(roletype object_r edgegesture_service_26_0)
 (typeattribute font_service_26_0)
 (roletype object_r font_service_26_0)
 (typeattribute netd_listener_service_26_0)
