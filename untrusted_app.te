@@ -192,9 +192,11 @@ neverallow untrusted_app {
   -sdcardfs                 # sdcard
   -vfat
 
-# For exfat and f2fs/ext4 sdcards via sdcardfs
+# For exfat, f2fs/ext4, and ntfs storage via sdcardfs
 ifelse(shipping_build, `true', ,`
+  -exfat
   -fuseblk
+  -ntfs
   -sdcard_posix
 ')
 
@@ -209,6 +211,7 @@ ifelse(shipping_build, `true', ,`
     -coredump_file          # userdebug/eng only
   ')
 }:dir_file_class_set { create unlink };
+
 
 # Do not allow untrusted_app to directly open tun_device
 neverallow untrusted_app tun_device:chr_file open;
